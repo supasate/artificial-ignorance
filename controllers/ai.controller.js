@@ -35,6 +35,10 @@ function deflatTable(flatTable) {
     return table;
 }
 
+exports.index = function (req, res) {
+    res.send("Hello CodeHew Hackathoner!");
+};
+
 var SIZE = 3;
 var ONGOING = 0;
 var O_WIN = 1;

@@ -5,5 +5,6 @@ module.exports = function (app) {
 
     app.route('/ai/play').post(ai.play);
     app.route('/ai/move').post(ai.move);
+    app.route('/').get(ai.index);
 
 };
