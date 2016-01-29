@@ -1,4 +1,4 @@
-function getRandomInt(min, max) {
+ftunction getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -138,7 +138,6 @@ function nextMove (table) {
     if (table[0][2] == 'O' && table[1][1] == 'O' && table[2][0] == ' ') return [2, 0];
 
     // defensive move
-    console.log(table[0]);
     // 1st row
     if (JSON.stringify(table[0]) == JSON.stringify([' ', 'X', 'X']) ) return [0, 0];
     if (JSON.stringify(table[0]) == JSON.stringify(['X', ' ', 'X']) ) return [0, 1];
@@ -204,7 +203,6 @@ exports.move = function (req, res) {
     status = checkFinish(table);
     if (status == ONGOING) {
         next = nextMove(table);
-        console.log(next);
         table[next[0]][next[1]] = 'O';
         console.log("I response to " + team + " with this move");
         printTable(table);
